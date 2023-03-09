@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -8,27 +8,26 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
-  loginForm: FormGroup = new FormGroup({});
-  errorMessage: string = '';
-  isLoading: boolean = false;
+  public loginForm: FormGroup = new FormGroup({});
+  public errorMessage: string = '';
+  public isLoading: boolean = false;
 
   constructor(private authService: AuthService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(20)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)])
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.loginForm.valid) {
       this.isLoading = true;
       this.authService.login(this.loginForm.value.username, this.loginForm.value.password)
         .subscribe(
           response => {
-            // TODO handle api response
-            this.isLoading = false
+            this.isLoading = false;
           },
           error => {
             this.isLoading = false;
