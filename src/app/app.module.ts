@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
     LoginPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    HomePageComponent,
+    RegisterPageComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,

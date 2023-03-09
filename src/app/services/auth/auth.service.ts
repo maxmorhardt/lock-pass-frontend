@@ -36,6 +36,12 @@ export class AuthService {
     }, httpOptions);
   }
 
+  // TODO Implement method
+  isLoggedIn(): boolean {
+    return false;
+  }
+
+  // TODO Check if works and use
   private setCookie(name: string, value: string, expireDays: number): void {
     const date = new Date();
     date.setTime(date.getTime() + (expireDays * 24 * 60 * 60 * 1000));

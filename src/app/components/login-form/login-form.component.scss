@@ -1,11 +1,14 @@
 .login-form {
+  max-width: 30rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -26,11 +29,7 @@
   border-radius: 5px;
   font-size: 16px;
   width: 100%;
-}
-
-.error-message {
-  padding-top: 1rem;
-  color: #f00;
+  box-sizing: border-box;
 }
 
 .login-button {
@@ -60,3 +59,35 @@
   cursor: default;
 }
 
+.error-message {
+  margin-top: 1.25rem;
+  color: #f00;
+  max-width: 20rem;
+}
+
+.login-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+.forgot-password {
+  color: #337ab7;
+  text-decoration: none;
+  margin-left: 5px;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
