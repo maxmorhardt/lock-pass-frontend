@@ -1,1 +1,46 @@
-<p>login-form works!</p>
+<div class="login-form">
+  <h2 class="mat-h2">Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" required>
+      <mat-error class="error-message" *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched">
+        <ng-container *ngIf="loginForm.controls['username'].hasError('required')">
+          Username is required
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['username'].hasError('minlength')">
+          Username must be at least 5 characters long
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['username'].hasError('maxlength')">
+          Username cannot be more than 20 characters long
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['username'].hasError('pattern')">
+          Username can only contain letters, numbers, and underscores
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required>
+      <mat-error class="error-message" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+        <ng-container *ngIf="loginForm.controls['password'].hasError('required')">
+          Password is required
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['password'].hasError('minlength')">
+          Password must be at least 8 characters long
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['password'].hasError('maxlength')">
+          Password cannot be more than 20 characters long
+        </ng-container>
+        <ng-container *ngIf="loginForm.controls['password'].hasError('pattern')">
+          Password must contain at least one letter, one number, and one special character
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Login</span>
+      <span *ngIf="isLoading">Logging in...</span>
+    </button>
+    <mat-error class="error-message" *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+  </form>
+</div>
