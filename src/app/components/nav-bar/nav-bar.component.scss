@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #FFF;
   padding: 5px 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -36,4 +36,22 @@ nav {
 .nav-links li:last-child {
   margin-right: 0;
   margin-left: auto;
+  padding-right: .25rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.row p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding-left: .5rem;
+  text-align: center;
+  cursor: default;
 }

@@ -1,5 +1,5 @@
 .login-form {
-  max-width: 30rem;
+  min-width: 25rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
 }
 
 .error-message {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   color: #f00;
   max-width: 20rem;
 }
@@ -74,20 +74,22 @@
   color: #333;
   margin: 0;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   border-bottom: 2px solid #333;
 }
 
 .forgot-password {
-  color: #337ab7;
-  text-decoration: none;
   margin-left: 5px;
   font-weight: bold;
   padding-top: 1rem;
-  padding-bottom: .5rem;
 }
 
-.forgot-password:hover {
+.forgot-password a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
   text-decoration: underline;
 }

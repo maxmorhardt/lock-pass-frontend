@@ -1,5 +1,5 @@
 <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
-  <h2 class="login-header">Password Pro</h2>
+  <h2 class="login-header">Lock Pass</h2>
 
   <!-- TODO refactor into its own component -->
   <section class="form-group">
@@ -33,8 +33,9 @@
 
   <button type="submit" [disabled]="loginForm.invalid || isLoading" class="login-button">Login</button>
 
-  <span *ngIf="errorMessage" class="error-message">{{ errorMessage }}</span>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
+  <!-- TODO add forgot password -->
   <div class="forgot-password">
     <a routerLink="/forgot-password">Forgot Password?</a>
   </div>

@@ -8,6 +8,7 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
+
   public loginForm: FormGroup = new FormGroup({});
   public errorMessage: string = '';
   public isLoading: boolean = false;
@@ -36,4 +37,5 @@ export class LoginFormComponent implements OnInit {
         );
     }
   }
+  
 }
