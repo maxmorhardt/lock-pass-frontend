@@ -31,9 +31,9 @@
   </section>
 
   <section class="form-group">
-    <label for="confirm-password">Confirm Password</label>
-    <input id="confirm-password" type="password" formControlName="confirm-password">
-    <div *ngIf="registerForm?.invalid && registerForm.get('confirm-password')?.touched" class="error-message">
+    <label for="confirmPassword">Confirm Password</label>
+    <input id="confirmPassword" type="password" formControlName="confirmPassword">
+    <div *ngIf="registerForm?.invalid && registerForm.get('confirmPassword')?.touched" class="error-message">
       <span>
         Password does not match.
       </span>
