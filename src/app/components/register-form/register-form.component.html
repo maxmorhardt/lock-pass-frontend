@@ -33,14 +33,14 @@
   <section class="form-group">
     <label for="confirm-password">Confirm Password</label>
     <input id="confirm-password" type="password" formControlName="confirm-password">
-    <div *ngIf="registerForm.get('confirm-password')?.invalid && registerForm.get('confirm-password')?.touched" class="error-message">
-      <span *ngIf="registerForm.get('confirm-password')?.errors?.['pattern']">
+    <div *ngIf="registerForm?.invalid && registerForm.get('confirm-password')?.touched" class="error-message">
+      <span>
         Password does not match.
       </span>
     </div>
   </section>
 
-  <button type="submit" [disabled]="registerForm.invalid || isLoading" class="register-button">Login</button>
+  <button type="submit" [disabled]="registerForm.invalid || isLoading" class="register-button">Register</button>
 
   <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
