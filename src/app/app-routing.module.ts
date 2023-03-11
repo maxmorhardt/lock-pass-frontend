@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth-guard';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
+// TODO Forgot password
 const routes: Routes = [
   { path: '', component: HomePageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginPageComponent },
