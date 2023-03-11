@@ -3,7 +3,6 @@ Frontend for the Lock Pass website <br />
 lockpass.co
 
 ## TODO Entry:
-- Fix form so it doesnt go through nav bar when vertically minimized
 - Confirm password validator
 
 - Confirm verification code 
