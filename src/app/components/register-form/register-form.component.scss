@@ -1,4 +1,4 @@
-.login-form {
+.register-form {
   min-width: 25rem;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   box-sizing: border-box;
 }
 
-.login-button {
+.register-button {
   padding: 10px;
   background-color: #007bff;
   border: none;
@@ -45,15 +45,15 @@
   cursor: pointer;
 }
 
-.login-button:hover:enabled {
+.register-button:hover:enabled {
   background-color: #0069d9;
 }
 
-.login-button:active:enabled {
+.register-button:active:enabled {
   transform: translateY(1px);
 }
 
-.login-button:disabled {
+.register-button:disabled {
   opacity: 0.5;
   cursor: default;
 }
@@ -64,7 +64,7 @@
   max-width: 20rem;
 }
 
-.login-header {
+.register-header {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-transform: uppercase;

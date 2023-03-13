@@ -15,25 +15,26 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<any> {
     return this.http.post(
       AUTH_API + 'login', 
       { 
-        username, 
+        email, 
         password
       }, 
       httpOptions
     );
   }
 
-  register(username: string, email: string, password: string): Observable<any> {
+  register(email: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'signup', 
     {
-      username,
       email,
       password
     }, httpOptions);
   }
+
+
 
   // TODO Implement method
   isLoggedIn(): boolean {

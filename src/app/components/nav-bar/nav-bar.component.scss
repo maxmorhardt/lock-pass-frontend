@@ -1,4 +1,6 @@
 nav {
+  position: sticky; 
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +10,7 @@ nav {
 }
 
 .logo img {
-  height: 35px;
+  height: 30px;
 }
 
 .nav-links ul {
