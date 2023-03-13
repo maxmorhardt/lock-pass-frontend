@@ -3,8 +3,6 @@ Frontend for the Lock Pass website <br />
 lockpass.co
 
 ## TODO Entry:
-- Confirm password validator
-
 - Confirm verification code 
 - Forgot password page
 - Hash pswd before api call

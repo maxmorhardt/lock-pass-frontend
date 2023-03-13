@@ -3,7 +3,7 @@ FROM node:18.15.0 as build
 WORKDIR /app 
 COPY . .
 RUN npm install 
-RUN npm run build  
+RUN ng build --prod
 
 # Serve
 FROM nginx:latest 

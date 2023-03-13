@@ -34,7 +34,7 @@
     <label for="confirmPassword">Confirm Password</label>
     <input id="confirmPassword" type="password" formControlName="confirmPassword">
     <div *ngIf="registerForm?.invalid && registerForm.get('confirmPassword')?.touched" class="error-message">
-      <span>
+      <span *ngIf="registerForm.get('confirmPassword')?.errors?.['confirmPasswordValidator']">
         Password does not match.
       </span>
     </div>
